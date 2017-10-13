@@ -8,7 +8,7 @@ namespace EncapsulateClassesWithFactory.MyWork.Descriptors
         readonly Type mapperType;
         readonly Type forType;
 
-        public BooleanDescriptor(string descriptorName, Type mapperType, Type forType) 
+        internal BooleanDescriptor(string descriptorName, Type mapperType, Type forType) 
             : base(descriptorName, mapperType, forType)
         {
             this.forType = forType;
