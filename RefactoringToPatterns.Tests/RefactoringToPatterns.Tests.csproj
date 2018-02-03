@@ -49,6 +49,8 @@
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\LoanTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\PaymentTests.cs" />
     <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\RevolverStrategyTests.cs" />
+    <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\AdvisedLineStrategyTests.cs" />
+    <Compile Include="ReplaceConditionalLogicWithStrategy\MyWork\TermLoanStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
