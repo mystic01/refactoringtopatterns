@@ -60,6 +60,7 @@
     <Compile Include="FormTemplateMethod\MyWork\PaymentTests.cs" />
     <Compile Include="FormTemplateMethod\MyWork\RevolverStrategyTests.cs" />
     <Compile Include="FormTemplateMethod\MyWork\TermLoanStrategyTests.cs" />
+    <Compile Include="ReplaceStateAlteringConditionalsWithState\InitialCode\TestStates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -93,8 +94,14 @@
       <Project>{F1231A49-7229-47D8-B19F-197683E3A829}</Project>
       <Name>FormTemplateMethod</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ReplaceStateAlteringConditionalsWithState\ReplaceStateAlteringConditionalsWithState.csproj">
+      <Project>{EEE43182-702F-4BAA-9B43-491EAF07CFD0}</Project>
+      <Name>ReplaceStateAlteringConditionalsWithState</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
