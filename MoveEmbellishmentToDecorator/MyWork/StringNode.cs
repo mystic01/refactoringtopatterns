@@ -5,17 +5,12 @@ namespace MoveEmbellishmentToDecorator.MyWork
 {
     public class StringNode : AbstractNode
     {
-        private StringBuilder textBuilder;
+        protected StringBuilder textBuilder;
         private bool shouldDecode;
 
         public StringNode(StringBuilder textBuffer, int textBegin, int textEnd) : base(textBegin, textEnd)
         {
             this.textBuilder = textBuffer;
-        }
-
-        public StringNode(StringBuilder textBuffer, int textBegin, int textEnd, bool shouldDecode) : this(textBuffer, textBegin, textEnd)
-        {
-            this.shouldDecode = shouldDecode;
         }
 
         public override string toHtml()
@@ -25,10 +20,14 @@ namespace MoveEmbellishmentToDecorator.MyWork
 
         public override string toPlainTextString()
         {
-            string result = textBuilder.ToString();
-            if (shouldDecode)
-                result = Translate.decode(result);
-            return result;
+            return textBuilder.ToString();
+        }
+
+        public static Node createStringNode(StringBuilder textBuffer, int textBegin, int textEnd, bool shouldEncode)
+        {
+            if (shouldEncode)
+                return new DecodingNode(new StringNode(textBuffer, textBegin, textEnd));
+            return new StringNode(textBuffer, textBegin, textEnd);
         }
     }
 }

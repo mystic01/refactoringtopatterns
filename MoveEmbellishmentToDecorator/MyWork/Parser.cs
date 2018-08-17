@@ -30,7 +30,7 @@ namespace MoveEmbellishmentToDecorator.MyWork
         {
             StringBuilder decodedContent = new StringBuilder();
             decodedContent.Append(_stringContent);
-            return new NodeIterator(new List<Node>{new StringNode(decodedContent, 0, 0, true)});
+            return new NodeIterator(new List<Node>{StringNode.createStringNode(decodedContent, 0, 0, true)});
         }
     }
 }

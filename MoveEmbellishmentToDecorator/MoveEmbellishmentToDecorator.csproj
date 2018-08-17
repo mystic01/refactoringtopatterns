@@ -51,6 +51,7 @@
     <Compile Include="InitialCode\Parser.cs" />
     <Compile Include="MyWork\AbstractNode.cs" />
     <Compile Include="MyWork\CompositeTag.cs" />
+    <Compile Include="MyWork\DecodingNode.cs" />
     <Compile Include="MyWork\Node.cs" />
     <Compile Include="MyWork\NodeIterator.cs" />
     <Compile Include="MyWork\NodeList.cs" />
