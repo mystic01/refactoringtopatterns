@@ -5,19 +5,19 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
 {
     public class Loan
     {
-        double _commitment = 1.0;
+        private double _commitment = 1.0;
         private DateTime? _expiry;
         private DateTime? _maturity;
         private double _outstanding;
-        IList<Payment> _payments = new List<Payment>();
+        private IList<Payment> _payments = new List<Payment>();
         private DateTime? _today = DateTime.Now;
         private DateTime _start;
-        private long MILLIS_PER_DAY = 86400000;
-        private long DAYS_PER_YEAR = 365;
         private double _riskRating;
         private double _unusedPercentage;
+        private readonly CapitalStrategy _capitalStrategy;
 
-        public Loan(double commitment, double notSureWhatThisIs, DateTime start, DateTime? expiry, DateTime? maturity, int riskRating)
+        private Loan(double commitment, double notSureWhatThisIs, DateTime start, DateTime? expiry, DateTime? maturity,
+            int riskRating, CapitalStrategy capitalStrategy)
         {
             this._expiry = expiry;
             this._commitment = commitment;
@@ -26,25 +26,68 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
             this._maturity = maturity;
             this._riskRating = riskRating;
             this._unusedPercentage = 1.0;
+            _capitalStrategy = capitalStrategy;
+        }
+
+        public double Commitment
+        {
+            set { _commitment = value; }
+            get { return _commitment; }
+        }
+
+        public DateTime? Expiry
+        {
+            set { _expiry = value; }
+            get { return _expiry; }
+        }
+
+        public DateTime? Maturity
+        {
+            set { _maturity = value; }
+            get { return _maturity; }
+        }
+
+        public double RiskRating
+        {
+            set { _riskRating = value; }
+            get { return _riskRating; }
+        }
+
+        public IList<Payment> Payments
+        {
+            set { _payments = value; }
+            get { return _payments; }
+        }
+
+        public DateTime? Today
+        {
+            set { _today = value; }
+            get { return _today; }
+        }
+
+        public DateTime Start
+        {
+            set { _start = value; }
+            get { return _start; }
         }
 
         public static Loan NewTermLoan(double commitment, DateTime start, DateTime maturity, int riskRating)
         {
-            return new Loan(commitment, commitment, start, null, 
-                            maturity, riskRating);
+            return new Loan(commitment, commitment, start, null,
+                            maturity, riskRating, new CapitalStrategyTermLoan());
         }
 
-        public static Loan NewRevolver(double commitment, DateTime start, DateTime expiry, int riskRating) 
+        public static Loan NewRevolver(double commitment, DateTime start, DateTime expiry, int riskRating)
         {
             return new Loan(commitment, 0, start, expiry,
-                            null, riskRating);
+                            null, riskRating, new CapitalStrategyRevolver());
         }
 
         public static Loan NewAdvisedLine(double commitment, DateTime start, DateTime expiry, int riskRating)
         {
             if (riskRating > 3) return null;
             Loan advisedLine = new Loan(commitment, 0, start, expiry,
-                            null, riskRating);
+                            null, riskRating, new CapitalStrategyAdvisedLine());
             advisedLine.SetUnusedPercentage(0.1);
             return advisedLine;
         }
@@ -54,86 +97,32 @@ namespace ReplaceConditionalLogicWithStrategy.MyWork
             _payments.Add(new Payment(amount, paymentDate));
         }
 
-        public double Capital() {
-            if(_expiry == null && _maturity != null)
-                return _commitment * Duration() * RiskFactor();
-            if(_expiry != null && _maturity == null) {
-                if(GetUnusedPercentage() != 1.0) {
-                    return _commitment * GetUnusedPercentage() * Duration() * RiskFactor();
-                }
-                else {
-                    return (OutstandingRiskAmount() * Duration() * RiskFactor())
-                        + (UnusedRiskAmount() * Duration() * UnusedRiskFactor());
-                }
-            }
-            return 0.0;
+        public double Capital()
+        {
+            return _capitalStrategy.capital(this);
         }
 
         public double Duration()
         {
-            if (_expiry == null && _maturity != null)
-            {
-                return WeightedAverageDuration();
-            }
-            else if (_expiry != null && _maturity == null)
-            {
-                return YearsTo(_expiry);
-            }
-            return 0.0;
+            return _capitalStrategy.duration(this);
         }
 
-        private double WeightedAverageDuration()
-        { 
-            double duration = 0.0;
-            double weightedAverage = 0.0;
-            double sumOfPayments = 0.0;
-
-            foreach (var payment in _payments)
-            {
-                sumOfPayments += payment.Amount;
-                weightedAverage += YearsTo(payment.Date) * payment.Amount;
-            }
-
-            if (_commitment != 0.0)
-            {
-                duration = weightedAverage / sumOfPayments;
-            }
-
-            return duration;
-        }
-
-        private double YearsTo(DateTime? endDate)
-        {
-            DateTime? beginDate = (_today == null ? _start : _today);
-            return (double)((endDate?.Ticks - beginDate?.Ticks) / MILLIS_PER_DAY / DAYS_PER_YEAR);
-        }
-
-        private double RiskFactor()
-        {
-            return InitialCode.RiskFactor.GetFactors().ForRating(_riskRating);
-        }
-
-        private double GetUnusedPercentage()
+        public double GetUnusedPercentage()
         {
             return _unusedPercentage;
         }
 
-        public void SetUnusedPercentage(double unusedPercentage) 
+        public void SetUnusedPercentage(double unusedPercentage)
         {
             _unusedPercentage = unusedPercentage;
         }
 
-        private double UnusedRiskAmount()
+        public double UnusedRiskAmount()
         {
             return (_commitment - _outstanding);
         }
 
-        private double UnusedRiskFactor()
-        {
-            return UnusedRiskFactors.GetFactors().ForRating(_riskRating);
-        }
-
-        private double OutstandingRiskAmount()
+        public double OutstandingRiskAmount()
         {
             return _outstanding;
         }
