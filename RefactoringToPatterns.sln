@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveEmbellishmentToDecorato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceStateAlteringConditionalsWithState", "ReplaceStateAlteringConditionalsWithState\ReplaceStateAlteringConditionalsWithState.csproj", "{EEE43182-702F-4BAA-9B43-491EAF07CFD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceImplicitTreeWithComposite", "ReplaceImplicitTreeWithComposite\ReplaceImplicitTreeWithComposite.csproj", "{B40C2D77-231B-4448-9AB2-E4E49F7CD873}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{EEE43182-702F-4BAA-9B43-491EAF07CFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEE43182-702F-4BAA-9B43-491EAF07CFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEE43182-702F-4BAA-9B43-491EAF07CFD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B40C2D77-231B-4448-9AB2-E4E49F7CD873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B40C2D77-231B-4448-9AB2-E4E49F7CD873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B40C2D77-231B-4448-9AB2-E4E49F7CD873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B40C2D77-231B-4448-9AB2-E4E49F7CD873}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
