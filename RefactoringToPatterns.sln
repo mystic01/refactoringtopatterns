@@ -12,15 +12,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncapsulateClassesWithFacto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphicCreationWithFactoryMethod", "PolymorphicCreationWithFactoryMethod\PolymorphicCreationWithFactoryMethod.csproj", "{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.2_ReplaceConditionalLogicWithStrategy", "ReplaceConditionalLogicWithStrategy\7.2_ReplaceConditionalLogicWithStrategy.csproj", "{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.2_ReplaceConditionalLogicWithStrategy", "7.2_ReplaceConditionalLogicWithStrategy\7.2_ReplaceConditionalLogicWithStrategy.csproj", "{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormTemplateMethod", "FormTemplateMethod\FormTemplateMethod.csproj", "{F1231A49-7229-47D8-B19F-197683E3A829}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.3_MoveEmbellishmentToDecorator", "MoveEmbellishmentToDecorator\7.3_MoveEmbellishmentToDecorator.csproj", "{32EA38AF-8F24-44D4-8A21-F70B483DA06A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.3_MoveEmbellishmentToDecorator", "7.3_MoveEmbellishmentToDecorator\7.3_MoveEmbellishmentToDecorator.csproj", "{32EA38AF-8F24-44D4-8A21-F70B483DA06A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.4_ReplaceStateAlteringConditionalsWithState", "ReplaceStateAlteringConditionalsWithState\7.4_ReplaceStateAlteringConditionalsWithState.csproj", "{EEE43182-702F-4BAA-9B43-491EAF07CFD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.4_ReplaceStateAlteringConditionalsWithState", "7.4_ReplaceStateAlteringConditionalsWithState\7.4_ReplaceStateAlteringConditionalsWithState.csproj", "{EEE43182-702F-4BAA-9B43-491EAF07CFD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.5_ReplaceImplicitTreeWithComposite", "ReplaceImplicitTreeWithComposite\7.5_ReplaceImplicitTreeWithComposite.csproj", "{B40C2D77-231B-4448-9AB2-E4E49F7CD873}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.5_ReplaceImplicitTreeWithComposite", "7.5_ReplaceImplicitTreeWithComposite\7.5_ReplaceImplicitTreeWithComposite.csproj", "{B40C2D77-231B-4448-9AB2-E4E49F7CD873}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

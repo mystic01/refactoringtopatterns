@@ -69,7 +69,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MoveEmbellishmentToDecorator\7.3_MoveEmbellishmentToDecorator.csproj">
+    <ProjectReference Include="..\7.3_MoveEmbellishmentToDecorator\7.3_MoveEmbellishmentToDecorator.csproj">
       <Project>{32ea38af-8f24-44d4-8a21-f70b483da06a}</Project>
       <Name>7.3_MoveEmbellishmentToDecorator</Name>
     </ProjectReference>
@@ -89,7 +89,7 @@
       <Project>{632ABCBD-B56E-427B-B00B-ECFCEFFEF0D5}</Project>
       <Name>PolymorphicCreationWithFactoryMethod</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ReplaceConditionalLogicWithStrategy\7.2_ReplaceConditionalLogicWithStrategy.csproj">
+    <ProjectReference Include="..\7.2_ReplaceConditionalLogicWithStrategy\7.2_ReplaceConditionalLogicWithStrategy.csproj">
       <Project>{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}</Project>
       <Name>7.2_ReplaceConditionalLogicWithStrategy</Name>
     </ProjectReference>
@@ -97,11 +97,11 @@
       <Project>{F1231A49-7229-47D8-B19F-197683E3A829}</Project>
       <Name>FormTemplateMethod</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ReplaceImplicitTreeWithComposite\7.5_ReplaceImplicitTreeWithComposite.csproj">
+    <ProjectReference Include="..\7.5_ReplaceImplicitTreeWithComposite\7.5_ReplaceImplicitTreeWithComposite.csproj">
       <Project>{B40C2D77-231B-4448-9AB2-E4E49F7CD873}</Project>
       <Name>7.5_ReplaceImplicitTreeWithComposite</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ReplaceStateAlteringConditionalsWithState\7.4_ReplaceStateAlteringConditionalsWithState.csproj">
+    <ProjectReference Include="..\7.4_ReplaceStateAlteringConditionalsWithState\7.4_ReplaceStateAlteringConditionalsWithState.csproj">
       <Project>{EEE43182-702F-4BAA-9B43-491EAF07CFD0}</Project>
       <Name>7.4_ReplaceStateAlteringConditionalsWithState</Name>
     </ProjectReference>
