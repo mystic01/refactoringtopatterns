@@ -42,6 +42,17 @@
   <ItemGroup>
     <Compile Include="InitialCode\SystemAdmin.cs" />
     <Compile Include="InitialCode\SystemPermission.cs" />
+    <Compile Include="MyWork\PermissionClaimed.cs" />
+    <Compile Include="MyWork\PermissionDenied.cs" />
+    <Compile Include="MyWork\PermissionGranted.cs" />
+    <Compile Include="MyWork\PermissionRequested.cs" />
+    <Compile Include="MyWork\PermissionState.cs" />
+    <Compile Include="MyWork\PermissionUnixClaimed.cs" />
+    <Compile Include="MyWork\PermissionUnixRequested.cs" />
+    <Compile Include="MyWork\SystemAdmin.cs" />
+    <Compile Include="MyWork\SystemPermission.cs" />
+    <Compile Include="MyWork\SystemProfile.cs" />
+    <Compile Include="MyWork\SystemUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="InitialCode\SystemProfile.cs" />
     <Compile Include="InitialCode\SystemUser.cs" />

@@ -61,6 +61,7 @@
     <Compile Include="FormTemplateMethod\MyWork\RevolverStrategyTests.cs" />
     <Compile Include="FormTemplateMethod\MyWork\TermLoanStrategyTests.cs" />
     <Compile Include="ReplaceStateAlteringConditionalsWithState\InitialCode\TestStates.cs" />
+    <Compile Include="ReplaceStateAlteringConditionalsWithState\MyWork\TestStates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
