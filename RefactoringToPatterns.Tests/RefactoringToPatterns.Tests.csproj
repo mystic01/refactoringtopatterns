@@ -36,9 +36,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReplaceConditionalDispatcherWithCommand\InitialCode\CatalogAppTests.cs" />
     <Compile Include="EncapsulateClassesWithFactory\MyWork\Mappers\DescriptorMapperTests.cs" />
     <Compile Include="MoveEmbellishmentToDecorator\InitialCode\StringNodeTests.cs" />
     <Compile Include="MoveEmbellishmentToDecorator\MyWork\StringNodeTests.cs" />
+    <Compile Include="ReplaceConditionalDispatcherWithCommand\MyWork\CatalogAppTests.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\InitialCode\CapitalCalculationTests.cs" />
     <Compile Include="ReplaceConstructorsWithCreationMethods\MyWork\CapitalCalculationTests.cs" />
     <Compile Include="ChainConstructors\InitialCode\CapitalCalculationTests.cs" />
@@ -72,6 +74,10 @@
     <ProjectReference Include="..\7.3_MoveEmbellishmentToDecorator\7.3_MoveEmbellishmentToDecorator.csproj">
       <Project>{32ea38af-8f24-44d4-8a21-f70b483da06a}</Project>
       <Name>7.3_MoveEmbellishmentToDecorator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7.6_ReplaceConditionalDispatcherWithCommand\7.6_ReplaceConditionalDispatcherWithCommand.csproj">
+      <Project>{AAF352D9-63D0-434F-AED3-F3F8C58679EB}</Project>
+      <Name>7.6_ReplaceConditionalDispatcherWithCommand</Name>
     </ProjectReference>
     <ProjectReference Include="..\ReplaceConstructorsWithCreationMethods\ReplaceConstructorsWithCreationMethods.csproj">
       <Project>{62ECDEAE-B8A4-4CD1-ACF5-E11965928B4B}</Project>
