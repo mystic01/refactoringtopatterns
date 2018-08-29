@@ -5,11 +5,11 @@ namespace FormTemplateMethod.MyWork
 {
     public class Loan
     {
-        double _commitment = 1.0;
+        private double _commitment = 1.0;
         private DateTime? _expiry;
         private DateTime? _maturity;
         private double _outstanding;
-        IList<Payment> _payments = new List<Payment>();
+        private IList<Payment> _payments = new List<Payment>();
         private DateTime? _today = DateTime.Now;
         private DateTime _start;
         private long MILLIS_PER_DAY = 86400000;

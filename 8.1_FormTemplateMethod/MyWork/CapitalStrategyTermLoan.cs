@@ -1,13 +1,14 @@
 ﻿using System;
+
 namespace FormTemplateMethod.MyWork
 {
     public class CapitalStrategyTermLoan : CapitalStrategy
     {
         private readonly double EPSILON = 0.001;
 
-        public override double Capital(Loan loan)
+        protected override double RiskAmountFor(Loan loan)
         {
-            return loan.GetCommitment() * Duration(loan) * RiskFactorFor(loan);
+            return loan.GetCommitment();
         }
 
         public override double Duration(Loan loan)

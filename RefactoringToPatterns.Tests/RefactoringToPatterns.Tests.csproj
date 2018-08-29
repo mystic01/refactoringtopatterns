@@ -99,9 +99,9 @@
       <Project>{ABA760CB-DC75-4C05-9CD7-DE2D19B5E64F}</Project>
       <Name>7.2_ReplaceConditionalLogicWithStrategy</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FormTemplateMethod\FormTemplateMethod.csproj">
+    <ProjectReference Include="..\8.1_FormTemplateMethod\8.1_FormTemplateMethod.csproj">
       <Project>{F1231A49-7229-47D8-B19F-197683E3A829}</Project>
-      <Name>FormTemplateMethod</Name>
+      <Name>8.1_FormTemplateMethod</Name>
     </ProjectReference>
     <ProjectReference Include="..\7.5_ReplaceImplicitTreeWithComposite\7.5_ReplaceImplicitTreeWithComposite.csproj">
       <Project>{B40C2D77-231B-4448-9AB2-E4E49F7CD873}</Project>
