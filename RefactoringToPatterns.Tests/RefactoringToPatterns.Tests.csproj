@@ -36,6 +36,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtractComposite\InitialCode\FormTagTests.cs" />
+    <Compile Include="ExtractComposite\InitialCode\LinkTagTests.cs" />
+    <Compile Include="ExtractComposite\MyWork\FormTagTests.cs" />
+    <Compile Include="ExtractComposite\MyWork\LinkTagTests.cs" />
     <Compile Include="ReplaceConditionalDispatcherWithCommand\InitialCode\CatalogAppTests.cs" />
     <Compile Include="EncapsulateClassesWithFactory\MyWork\Mappers\DescriptorMapperTests.cs" />
     <Compile Include="MoveEmbellishmentToDecorator\InitialCode\StringNodeTests.cs" />
@@ -78,6 +82,10 @@
     <ProjectReference Include="..\7.6_ReplaceConditionalDispatcherWithCommand\7.6_ReplaceConditionalDispatcherWithCommand.csproj">
       <Project>{AAF352D9-63D0-434F-AED3-F3F8C58679EB}</Project>
       <Name>7.6_ReplaceConditionalDispatcherWithCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\8.2_ExtractComposite\8.2_ExtractComposite.csproj">
+      <Project>{9fffe017-c263-46a2-b331-f7b90e1ee7d1}</Project>
+      <Name>8.2_ExtractComposite</Name>
     </ProjectReference>
     <ProjectReference Include="..\ReplaceConstructorsWithCreationMethods\ReplaceConstructorsWithCreationMethods.csproj">
       <Project>{62ECDEAE-B8A4-4CD1-ACF5-E11965928B4B}</Project>
