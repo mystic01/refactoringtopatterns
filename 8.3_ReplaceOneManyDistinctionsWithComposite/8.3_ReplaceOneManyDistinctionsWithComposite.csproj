@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F49CC6F1-089E-4279-9429-FD847F16179E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ReplaceOneManyDistinctionsWithComposite</RootNamespace>
+    <AssemblyName>ReplaceOneManyDistinctionsWithComposite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="InitialCode\BelowPriceSpec.cs" />
+    <Compile Include="InitialCode\ColorSpec.cs" />
+    <Compile Include="InitialCode\Product.cs" />
+    <Compile Include="InitialCode\ProductRepository.cs" />
+    <Compile Include="InitialCode\SizeSpec.cs" />
+    <Compile Include="InitialCode\Spec.cs" />
+    <Compile Include="MyWork\BelowPriceSpec.cs" />
+    <Compile Include="MyWork\ColorSpec.cs" />
+    <Compile Include="MyWork\CompositeSpec.cs" />
+    <Compile Include="MyWork\Product.cs" />
+    <Compile Include="MyWork\ProductRepository.cs" />
+    <Compile Include="MyWork\SizeSpec.cs" />
+    <Compile Include="MyWork\Spec.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

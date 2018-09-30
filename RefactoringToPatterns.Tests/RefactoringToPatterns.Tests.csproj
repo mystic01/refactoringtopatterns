@@ -34,6 +34,7 @@
     <Reference Include="mscorlib" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtractComposite\InitialCode\FormTagTests.cs" />
@@ -68,6 +69,8 @@
     <Compile Include="FormTemplateMethod\MyWork\TermLoanStrategyTests.cs" />
     <Compile Include="ReplaceImplicitTreeWithComposite\InitialCode\OrdersWriterTests.cs" />
     <Compile Include="ReplaceImplicitTreeWithComposite\MyWork\OrdersWriterTests.cs" />
+    <Compile Include="ReplaceOneManyDistinctionsWithComposite\InitialCode\ProductRepositoryTests.cs" />
+    <Compile Include="ReplaceOneManyDistinctionsWithComposite\MyWork\ProductRepositoryTests.cs" />
     <Compile Include="ReplaceStateAlteringConditionalsWithState\InitialCode\TestStates.cs" />
     <Compile Include="ReplaceStateAlteringConditionalsWithState\MyWork\TestStates.cs" />
   </ItemGroup>
@@ -86,6 +89,10 @@
     <ProjectReference Include="..\8.2_ExtractComposite\8.2_ExtractComposite.csproj">
       <Project>{9fffe017-c263-46a2-b331-f7b90e1ee7d1}</Project>
       <Name>8.2_ExtractComposite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\8.3_ReplaceOneManyDistinctionsWithComposite\8.3_ReplaceOneManyDistinctionsWithComposite.csproj">
+      <Project>{F49CC6F1-089E-4279-9429-FD847F16179E}</Project>
+      <Name>8.3_ReplaceOneManyDistinctionsWithComposite</Name>
     </ProjectReference>
     <ProjectReference Include="..\ReplaceConstructorsWithCreationMethods\ReplaceConstructorsWithCreationMethods.csproj">
       <Project>{62ECDEAE-B8A4-4CD1-ACF5-E11965928B4B}</Project>

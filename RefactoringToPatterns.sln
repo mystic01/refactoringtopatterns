@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.6_ReplaceConditionalDispa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8.2_ExtractComposite", "8.2_ExtractComposite\8.2_ExtractComposite.csproj", "{9FFFE017-C263-46A2-B331-F7B90E1EE7D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8.3_ReplaceOneManyDistinctionsWithComposite", "8.3_ReplaceOneManyDistinctionsWithComposite\8.3_ReplaceOneManyDistinctionsWithComposite.csproj", "{F49CC6F1-089E-4279-9429-FD847F16179E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,10 @@ Global
 		{9FFFE017-C263-46A2-B331-F7B90E1EE7D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FFFE017-C263-46A2-B331-F7B90E1EE7D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FFFE017-C263-46A2-B331-F7B90E1EE7D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49CC6F1-089E-4279-9429-FD847F16179E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49CC6F1-089E-4279-9429-FD847F16179E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49CC6F1-089E-4279-9429-FD847F16179E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49CC6F1-089E-4279-9429-FD847F16179E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
